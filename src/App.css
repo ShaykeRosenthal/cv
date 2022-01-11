@@ -1,0 +1,366 @@
+.App {
+  position: relative;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .container {
+  background: url(assets/bcg.jpg);
+  background-size: cover;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  position: relative;
+} */
+
+.gear1 {
+  /* width: 130px; */
+  position: fixed;
+  /* left: calc((100% - 130px) / 2); */
+  top: 50px;
+  transform: rotate(0deg);
+}
+
+.kanenet1 {
+  position: fixed;
+  top: 50px;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+/* .gear-bar {
+  width: 130px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 3%;
+  left: 80%;
+} */
+
+.floor {
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+  position: fixed;
+}
+
+.brass-weight-img {
+  width: 55px;
+  /* z-index: 1; */
+}
+
+.pook {
+  position: relative;
+  /* z-index: 1; */
+}
+
+.rod {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* border-radius: 50%; */
+}
+
+.rope {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background: repeating-linear-gradient(-45deg, #444cf7, #444cf7 5px, #e5e5f7 5px, #e5e5f7 25px);
+}
+
+.brass-weight-label {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  top: 60%;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+  left: calc((100% - 10px) / 2);
+}
+
+.brass-weight-label:hover {
+  text-decoration: underline;
+  font-size: 20px;
+  left: calc((100% - 10px) / 2);
+}
+
+.string {
+  background-color: white;
+}
+
+.instructions {
+  background-color: rgba(255, 255, 255, 0.65);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  z-index: 100;
+}
+
+.brass-weight-container {
+  z-index: 1;
+}
+
+.cards-container {
+  position: fixed;
+  /* width: 100vw; */
+  height: 175vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+}
+
+.card {
+  width: 100%;
+  /* height:50px; */
+  background-color: rgba(255, 255, 255, 0.65);
+  color: black;
+  position: fixed;
+  top: 0;
+  padding: 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: 5px;
+  animation-name: card-animation-big;
+  animation-duration: 0.75s;
+}
+
+.card-contact {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: black;
+  position: fixed;
+  top: 0;
+  padding: 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: 5px;
+  animation-name: card3-animation-big;
+  animation-duration: 0.75s;
+}
+
+.close-btn {
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  color: red;
+  animation-name: card-animation-big;
+  animation-duration: 0.75s;
+}
+
+.card-none {
+  display: none;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card1-bold {
+  font-weight: 800;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.content {
+  font-weight: 600;
+  font-size: 16px
+}
+
+.card3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.card3-background {
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  opacity: 0.25;
+  z-index: 0;
+  position: absolute;
+}
+
+.card3-contact-details {
+  z-index: 1;
+}
+
+.card3-contact-details>* {
+  margin-top: 15px;
+}
+
+.contact-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes card-animation-small {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 35vh;
+    opacity: 1
+  }
+}
+
+@keyframes close-btn-small {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 36vh;
+    opacity: 1
+  }
+}
+
+@keyframes close-btn-card3-small {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 16vh;
+    opacity: 1
+  }
+}
+
+@keyframes card-animation-big {
+  0% {
+    top: 0vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 50vh;
+    opacity: 1
+  }
+}
+@keyframes card3-animation-big {
+  0% {
+    top: 0vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 15vh;
+    opacity: 1
+  }
+}
+@keyframes card3-animation-small {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+
+  100% {
+    top: 15vh;
+    opacity: 1
+  }
+}
+
+.close-btn-2-card3 {
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  color: red;
+  animation-name: card3-animation-big;
+  animation-duration: 0.75s;
+}
+
+@media screen and (max-width: 800px) {
+  .cards-container {
+    position: fixed;
+    /* width: 100vw; */
+    height: 175vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .card {
+    width: 95%;
+    /* height:50px; */
+    background-color: rgba(255, 255, 255, 0.65);
+    color: black;
+    position: fixed;
+    top: 35vh;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    /* margin-left: 5px; */
+    animation-name: card-animation-small;
+    animation-duration: 0.75s;
+  }
+
+  .card-contact {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.65);
+    color: black;
+    position: fixed;
+    top: 15vh;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    animation-name: card3-animation-small;
+    animation-duration: 0.75s;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 36vh;
+    right: 4%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    color: red;
+    animation-name: close-btn-small;
+    animation-duration: 0.75s;
+  }
+
+  .close-btn-2-card3 {
+    position: fixed;
+    top: 16vh;
+    right: 4%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    color: red;
+    animation-name: close-btn-card3-small;
+    animation-duration: 0.75s;
+  }
+
+  .card3 {
+    height: auto;
+  }
+
+  .contact-details-container {
+    flex-direction: column;
+  }
+
+  .card3-background {
+    left: 0%;
+    align-self: center;
+    width: 75%;
+    opacity: 0.7;
+    z-index: 0;
+    position: relative;
+  }
+
+  .card3-contact-details>* {
+    margin-top: 10px;
+  }
+}
